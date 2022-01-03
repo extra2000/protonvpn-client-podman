@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://github.com/extra2000/protonvpn-client-podman/compare/v1.0.0...v1.0.1) (2022-01-03)
+
+
+### Fixes
+
+* **selinux:** add `allow protonvpn_client.process fusefs_t:file relabelto;` ([eff2082](https://github.com/extra2000/protonvpn-client-podman/commit/eff2082979ba7f3c59d6f6d469bd827ad2b6f143))
+
 ## 1.0.0 (2022-01-01)
 
 
