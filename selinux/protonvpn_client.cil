@@ -5,4 +5,5 @@
     (allow process http_port_t ( tcp_socket ( name_connect )))
     (allow process self ( netlink_route_socket ( nlmsg_write )))
     (allow process tun_tap_device_t ( chr_file ( getattr ioctl open read write )))
+    (allow process fusefs_t ( file ( relabelto )))
 )
