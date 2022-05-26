@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://github.com/extra2000/protonvpn-client-podman/compare/v1.0.1...v1.0.2) (2022-05-26)
+
+
+### Documentations
+
+* **README:** change to Podman pod ([5a283d8](https://github.com/extra2000/protonvpn-client-podman/commit/5a283d8db1375c6ff77186351757c0b786f37606))
+
 ### [1.0.1](https://github.com/extra2000/protonvpn-client-podman/compare/v1.0.0...v1.0.1) (2022-01-03)
 
 
