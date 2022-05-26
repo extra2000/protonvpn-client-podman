@@ -21,11 +21,20 @@ sudo semodule -i selinux/protonvpn_client.cil /usr/share/udica/templates/base_co
 ```
 
 
-## How to Run?
+## How to run with rootless Podman?
 
-Spawn a container:
+**NOTE: When running in rootless Podman, VPN will available for pods only. Host will not have VPN. This is a limitation when running in rootless Podman.**
+
+Spawn a pod:
 ```
-podman run -it --rm --privileged --security-opt label=type:protonvpn_client.process extra2000/protonvpn-client bash
+podman pod create --name protonvpn-client-pod
+```
+
+Spawn a container, `exit`, and then `exec`:
+```
+podman run -it --pod protonvpn-client-pod --restart unless-stopped --sysctl net.ipv4.ip_forward=1 --privileged --security-opt label=type:protonvpn_client.process --name protonvpn-client-pod-srv01 extra2000/protonvpn-client bash
+exit
+podman exec -it protonvpn-client-pod-srv01 bash
 ```
 
 Initialize profile, connect to random server, get status, and then disconnect:
